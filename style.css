@@ -45,12 +45,17 @@ body {
 
 .navbar__toggle-label {
   position: absolute;
-  top: 0;
+  top: 28px;
   left: 0;
   margin-left: 1em;
-  height: 100%;
+  height: 30%;
   display: flex;
   align-items: center;
+  transition: all .5s ease-in-out;
+}
+
+.navbar__toggle-label:hover {
+ cursor: pointer;
 }
 
 .navbar__hamburger,
@@ -62,6 +67,21 @@ body {
   width: 2em;
   border-radius: 2px;
   position: relative;
+  transition: all .5s ease-in-out;
+}
+
+/* Animation */
+.navbar__toggle-label.open .navbar__hamburger {
+	transform: translateX(-50px);
+	background: transparent;
+}
+
+.navbar__toggle-label.open .navbar__hamburger::before {
+	transform: rotate(45deg) translate(33px, -42px);
+}
+
+.navbar__toggle-label.open .navbar__hamburger::after {
+	    transform: rotate(-45deg) translate(33px, 43px);
 }
 
 .navbar__hamburger::before,
@@ -71,11 +91,11 @@ body {
 }
 
 .navbar__hamburger::before {
-  bottom: 7px;
+  top: 7px;
 }
 
 .navbar__hamburger::after {
-  top: 7px;
+	top: -7px;
 }
 
 .navbar__nav {
@@ -85,9 +105,6 @@ body {
   left: 0;
   background: var(--background);
   width: 100%;
-  transform: scale(1, 0);
-  transform-origin: top;
-  transition: transform 400ms ease-in-out;
 }
 
 .navbar__items {
