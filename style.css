@@ -77,11 +77,11 @@ body {
 }
 
 .navbar__toggle-label.open .navbar__hamburger::before {
-	transform: rotate(45deg) translate(33px, -42px);
+	    transform: rotate(45deg) translate(32px, -39px);
 }
 
 .navbar__toggle-label.open .navbar__hamburger::after {
-	    transform: rotate(-45deg) translate(33px, 43px);
+	    transform: rotate(-45deg) translate(30px, 41px);
 }
 
 .navbar__hamburger::before,
